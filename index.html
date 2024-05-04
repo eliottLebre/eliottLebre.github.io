@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ESP32_WebServer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/logo/wifi_off.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="nav-left">
+      <h1>ESP32</h1>
+
+      <ul>
+        <li class="nav_box">
+          <a href="#home"
+            ><span class="material-symbols-outlined"> home </span>Accueil</a
+          >
+        </li>
+
+        <li class="nav_box">
+          <a href="#elec">
+            <span class="material-symbols-outlined"> electric_bolt </span
+            >Electronique
+          </a>
+        </li>
+
+        <li class="nav_box">
+          <a href="#ecg"
+            ><span class="material-symbols-outlined"> ecg_heart </span>ECG</a
+          >
+        </li>
+
+        <li class="nav_box">
+          <a href="#robot">
+            <span class="material-symbols-outlined">
+              precision_manufacturing </span
+            >Robot
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section id="home" class="snap-scroll">
+        <h4>Accueil</h4>
+      </section>
+
+      <section id="elec" class="snap-scroll">
+        <h4>Electronique</h4>
+      </section>
+
+      <section id="ecg" class="snap-scroll">
+        <div id="ecg_item1" class="box">
+          <h5>Dashboard</h5>
+          <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+        </div>
+
+        <div id="ecg_item2" class="box">
+          <div class="tinybox">
+            <div class="title">
+              <h5>historique</h5>
+            </div>
+            <div class="data">
+              <div class="time">
+                <p>5am:</p>
+                <p>5am:</p>
+                <p>6am:</p>
+                <p>7am:</p>
+                <p>7am:</p>
+              </div>
+              <div class="bpm">
+                <div class="registre">
+                  <p>ECG: 95BPM</p>
+                  <p>Spo2: 98%</p>
+                </div>
+                <div class="registre">
+                  <p>ECG: 68BPM</p>
+                  <p>Spo2: 99%</p>
+                </div>
+                <div class="registre">
+                  <p>ECG: 82BPM</p>
+                  <p>Spo2: 96%</p>
+                </div>
+                <div class="registre">
+                  <p>ECG: 125BPM</p>
+                  <p>Spo2: 94%</p>
+                </div>
+                <div class="registre">
+                  <p>ECG: 82BPM</p>
+                  <p>Spo2: 96%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="ecg_item3" class="box">
+          <span class="material-symbols-outlined"> ecg_heart </span>
+          <div class="text">
+            <h5>Monitoring ECG</h5>
+            <p>
+              Bienvenu(e) dans l'onglet ECG celui-ci vous permettera de gérer
+              l'ECG ainsi que les valeurs Spo2 !
+            </p>
+            <p>
+              au lieux de Etteindre / Allumer ajouter un btn pour prendre une
+              mesure de l'ecg
+            </p>
+          </div>
+        </div>
+
+        <div id="ecg_item4" class="box">
+          <h4>Eteindre / Allumer</h4>
+          <div id="inpute-ecg">
+            <input type="checkbox" id="state-led" />
+            <label for="state-led"></label>
+          </div>
+        </div>
+      </section>
+
+      <section id="robot" class="snap-scroll">
+        <h4>Robot</h4>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
